@@ -3,7 +3,7 @@
     <nav class="navbar is-info is-transparent" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link class="navbar-item" to="/">
-          <h1 class="navbar-item is-size-1 has-text-white">PoseDance: A TikTok Trainer</h1>
+          <h1 class="navbar-item is-size-1 has-text-white">PoseDance: A TikTok dancing stars</h1>
         </router-link>
         <a
           id="burger"
