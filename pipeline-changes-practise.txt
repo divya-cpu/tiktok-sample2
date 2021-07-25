@@ -1,0 +1,30 @@
+trigger:
+  branches:
+    include:
+    - main
+    - feature/*
+    - bugfix/*
+    - test
+
+    exclude: 
+    - hotfix
+
+  paths:
+    include:
+    - 'app/src/*'
+    - 'js index.js'
+    exclude:
+    - 'js main.js'
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - checkout: self
+    submodules: true
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '/app'
+      api_location: '/api'
+      output_location: ''
+      azure_static_web_apps_api_token: $(deployment_token)
